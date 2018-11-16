@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9DB5587-8FB4-4077-8B3C-8BF7E8B74A84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PsdTools</RootNamespace>
+    <AssemblyName>PsdTools</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\Editor\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSD2UGUI\CustomTab\Editor\TabEditor.cs" />
+    <Compile Include="PSD2UGUI\CustomTab\Scripts\Page.cs" />
+    <Compile Include="PSD2UGUI\CustomTab\Scripts\Tab.cs" />
+    <Compile Include="PSD2UGUI\CustomTab\Scripts\TabGroup.cs" />
+    <Compile Include="PSD2UGUI\CustomTab\Scripts\TabTest.cs" />
+    <Compile Include="PSD2UGUI\Editor\Const\PSDImporterConst.cs" />
+    <Compile Include="PSD2UGUI\Editor\Core\PSDImportCtrl.cs" />
+    <Compile Include="PSD2UGUI\Editor\Core\PSDImportMenu.cs" />
+    <Compile Include="PSD2UGUI\Editor\Core\PSDImportUtility.cs" />
+    <Compile Include="PSD2UGUI\Editor\Data\Image.cs" />
+    <Compile Include="PSD2UGUI\Editor\Data\Layer.cs" />
+    <Compile Include="PSD2UGUI\Editor\Data\Position.cs" />
+    <Compile Include="PSD2UGUI\Editor\Data\PSDUI.cs" />
+    <Compile Include="PSD2UGUI\Editor\Data\Size.cs" />
+    <Compile Include="PSD2UGUI\Editor\Effects\MirrorEditor.cs" />
+    <Compile Include="PSD2UGUI\Editor\Enum\ImageSource.cs" />
+    <Compile Include="PSD2UGUI\Editor\Enum\ImageType.cs" />
+    <Compile Include="PSD2UGUI\Editor\Enum\LayerType.cs" />
+    <Compile Include="PSD2UGUI\Editor\ImageImports\HalfSpriteImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\ImageImports\SliceSpriteImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\ImageImports\SpriteImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\ImageImports\TextImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\ImageImports\TextureImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\Interface\IImageImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\Interface\ILayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\ButtonLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\DefultLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\DropDownLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\GridLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\GroupLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\InputFieldLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\LayoutElementLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\PanelLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\ScrollBarLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\ScrollViewLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\SliderLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\TabGroupLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Editor\LayerImport\ToggleLayerImport.cs" />
+    <Compile Include="PSD2UGUI\Effects\Collections\ListPool.cs" />
+    <Compile Include="PSD2UGUI\Effects\Collections\Pool.cs" />
+    <Compile Include="PSD2UGUI\Effects\Mirror.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PSD2UGUI\CustomTab\Prefab\Tab.prefab" />
+    <None Include="PSD2UGUI\CustomTab\Prefab\TabGroup.prefab" />
+    <None Include="PSD2UGUI\CustomTab\README.md" />
+    <None Include="PSD2UGUI\CustomTab\tab.unity" />
+    <None Include="PSD2UGUI\Doc\unity读取XML数据生成预设规则.doc" />
+    <None Include="PSD2UGUI\Doc\~%24说明及UI命名规则.docx" />
+    <None Include="PSD2UGUI\Doc\使用说明及UI命名规则.docx" />
+    <None Include="PSD2UGUI\Font\MicrosoftYaHei-Bold.ttf" />
+    <None Include="PSD2UGUI\Font\StaticFont\MicrosoftYaHei-Bold_Static.ttf" />
+    <None Include="PSD2UGUI\Samples\9slice\9slice.psd" />
+    <None Include="PSD2UGUI\Samples\grid\grid.psd" />
+    <None Include="PSD2UGUI\Samples\halftest\haltest.psd" />
+    <None Include="PSD2UGUI\Samples\scrollpanel\BattlePreparePanel.psd" />
+    <None Include="PSD2UGUI\Samples\slider\slider.psd" />
+    <None Include="PSD2UGUI\Samples\tab\tabtest.psd" />
+    <None Include="PSD2UGUI\Samples\texttest\TextTemp.psd" />
+    <None Include="PSD2UGUI\Samples\toggle\toggletest.psd" />
+    <None Include="PSD2UGUI\Template\UI\Button.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Canvas.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Empty.prefab" />
+    <None Include="PSD2UGUI\Template\UI\EventSystem.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Grid.prefab" />
+    <None Include="PSD2UGUI\Template\UI\HalfImage.prefab" />
+    <None Include="PSD2UGUI\Template\UI\HorizontalGroup.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Image.prefab" />
+    <None Include="PSD2UGUI\Template\UI\InputField.prefab" />
+    <None Include="PSD2UGUI\Template\UI\LayoutElement.prefab" />
+    <None Include="PSD2UGUI\Template\UI\RawImage.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Scrollbar.prefab" />
+    <None Include="PSD2UGUI\Template\UI\ScrollView.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Slider.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Tab.prefab" />
+    <None Include="PSD2UGUI\Template\UI\TabGroup.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Text.prefab" />
+    <None Include="PSD2UGUI\Template\UI\Toggle.prefab" />
+    <None Include="PSD2UGUI\Template\UI\VerticalGroup.prefab" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PSD2UGUI\CustomTab\Image\tabSel.png" />
+    <Content Include="PSD2UGUI\CustomTab\Image\tabUnSel.png" />
+    <Content Include="PSD2UGUI\Doc\version.txt" />
+    <Content Include="PSD2UGUI\JSCode\Export PSDUI.jsx" />
+    <Content Include="PSD2UGUI\JSCode\ReadMe.txt" />
+    <Content Include="PSD2UGUI\Samples\9slice\9slice.xml" />
+    <Content Include="PSD2UGUI\Samples\9slice\Mask_1.png" />
+    <Content Include="PSD2UGUI\Samples\9slice\TopInfoBg_2.png" />
+    <Content Include="PSD2UGUI\Samples\button\BG2_TabUnSel.png" />
+    <Content Include="PSD2UGUI\Samples\button\GreenBg_Normal_7.png" />
+    <Content Include="PSD2UGUI\Samples\button\GreenBg_Normal_8.png" />
+    <Content Include="PSD2UGUI\Samples\button\YelBg_Normal_LeftHalf_8.png" />
+    <Content Include="PSD2UGUI\Samples\button\YelBg_Normal_LeftHalf_9.png" />
+    <Content Include="PSD2UGUI\Samples\grid\background2_2.png" />
+    <Content Include="PSD2UGUI\Samples\grid\backgroundBorder2_3.png" />
+    <Content Include="PSD2UGUI\Samples\grid\backgroundBorder_4.png" />
+    <Content Include="PSD2UGUI\Samples\grid\background_1.png" />
+    <Content Include="PSD2UGUI\Samples\grid\grid.xml" />
+    <Content Include="PSD2UGUI\Samples\grid\heroHead.png" />
+    <Content Include="PSD2UGUI\Samples\grid\leftTopBackground_14.png" />
+    <Content Include="PSD2UGUI\Samples\grid\normal_11.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rewardProp.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightBackground1_6.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightBackground2_7.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightBackground3_8.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightbackground4_10.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightBackground5_9.png" />
+    <Content Include="PSD2UGUI\Samples\grid\rightBackground_5.png" />
+    <Content Include="PSD2UGUI\Samples\grid\topLeftBackground2_13.png" />
+    <Content Include="PSD2UGUI\Samples\grid\topLeftBackground_12.png" />
+    <Content Include="PSD2UGUI\Samples\halftest\halftest.xml" />
+    <Content Include="PSD2UGUI\Samples\halftest\house_BottomHalf_2.png" />
+    <Content Include="PSD2UGUI\Samples\halftest\house_LeftHalf_1.png" />
+    <Content Include="PSD2UGUI\Samples\halftest\plus_Quarter_3.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\background2_2.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\backgroundBorder2_3.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\backgroundBorder_4.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\background_1.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\heroHead.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\leftTopBackground_14.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\normal_11.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rewardProp.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightBackground1_6.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightBackground2_7.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightBackground3_8.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightbackground4_10.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightBackground5_9.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\rightBackground_5.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\scrollpanel.xml" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\topLeftBackground2_13.png" />
+    <Content Include="PSD2UGUI\Samples\scrollpanel\topLeftBackground_12.png" />
+    <Content Include="PSD2UGUI\Samples\slider\Background_1.png" />
+    <Content Include="PSD2UGUI\Samples\slider\Bg_2.png" />
+    <Content Include="PSD2UGUI\Samples\slider\Fill_3.png" />
+    <Content Include="PSD2UGUI\Samples\slider\Handle_4.png" />
+    <Content Include="PSD2UGUI\Samples\slider\slider.xml" />
+    <Content Include="PSD2UGUI\Samples\slider\_Bg_2.png" />
+    <Content Include="PSD2UGUI\Samples\slider\_Fill_3.png" />
+    <Content Include="PSD2UGUI\Samples\slider\_Handle_4.png" />
+    <Content Include="PSD2UGUI\Samples\tab\BG1_TabSel.png" />
+    <Content Include="PSD2UGUI\Samples\tab\BG_2.png" />
+    <Content Include="PSD2UGUI\Samples\tab\BG_4.png" />
+    <Content Include="PSD2UGUI\Samples\tab\BG_6.png" />
+    <Content Include="PSD2UGUI\Samples\tab\tab.xml" />
+    <Content Include="PSD2UGUI\Samples\texttest\background_1.png" />
+    <Content Include="PSD2UGUI\Samples\texttest\text5_ArtStatic_4.png" />
+    <Content Include="PSD2UGUI\Samples\texttest\texttest.xml" />
+    <Content Include="PSD2UGUI\Samples\toggle\BG_1.png" />
+    <Content Include="PSD2UGUI\Samples\toggle\Bg_Background_2.png" />
+    <Content Include="PSD2UGUI\Samples\toggle\Finish_Checkmark_3.png" />
+    <Content Include="PSD2UGUI\Samples\toggle\toggle.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
